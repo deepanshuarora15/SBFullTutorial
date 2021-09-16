@@ -1,0 +1,5 @@
+1. Dependencies:
+a. Spring Web
+b. h2
+
+2. There's a share button available for collaboration. Check that out on start.spring.io

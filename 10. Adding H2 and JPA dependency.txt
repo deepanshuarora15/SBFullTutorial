@@ -1,0 +1,15 @@
+1. Add the JPA dependency 
+2. Add the followibg commands to application.properties to run the console h2 application
+
+server.port=9090
+spring.jpa.defer-datasource-initialization=true
+spring.h2.console.enabled=true
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+
+
+3. There are usually gonna be errors. To resolve that, visit the answer by Subramanian on
+   https://stackoverflow.com/questions/61865206/springboot-2-3-0-while-connecting-to-h2-database
+
+4. 

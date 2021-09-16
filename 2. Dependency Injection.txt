@@ -1,0 +1,6 @@
+1. This pattern is there in all frameworks of all langauges - as this is a very imp pattern.
+2. In this pattern. manual creation of objects via the 'new' keyword is discouraged. IoC concept is followed which means - Inversion of
+   Control. 
+3. In IoC, we shift the object creation and maintenance responsibility over to the Spring framework instead.
+4. Doubt : lazy loading or active loading of instances in Spring containers? Do all of the classes get instantiated on the run,
+   or do they get created only when they are required?

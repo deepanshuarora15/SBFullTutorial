@@ -1,0 +1,6 @@
+1. Spring Boot helps in rapid application development.
+2. It helps in easy dependency management with its starter template GUI.
+3. SB projects have an embedded server within them. So instead oc creating a WAR file and then go around the problem of hosting them,
+   we can generate a simple JAR file and then go onto host it on the environment of our choice - hassle free. Hence the project
+   is by default - production ready.
+4. SB is the default option if you wanna build microservices.

@@ -1,0 +1,8 @@
+1. Architecture is such that the 
+   controller -> service -> Repsoitory layer -> DB
+
+2. Service layer os the layer that contains the business logic.
+3. Controller layer is just for routing i.e.t gets the request and responds to them. But behind the scenes logic is captured in
+   the service layer only.
+4. Service layer beneath uses the Data Access Layer i.e DAO layer or repository layer. This layer is the one that is supposed
+   to talk to your database. All database operations would be contained in this layer only.

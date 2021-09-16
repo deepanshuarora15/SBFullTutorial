@@ -1,0 +1,4 @@
+1. Main class has @SpringBootApplication as its annotations.
+2. Ctrl+Alt+O is used to delete all unused imports in IntelliJ Idea.
+3. If you want to change the configuration of your project, do it via application.properties like
+   server.port=9090

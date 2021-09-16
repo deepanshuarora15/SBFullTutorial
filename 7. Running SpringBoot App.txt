@@ -1,0 +1,18 @@
+package com.dailycodebuffer.springBoot.tutorial.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloController {
+
+    @GetMapping(path="/helloworld")
+    public String HelloWorld(){
+        return "Welcome to my tutorial bitches";
+    }
+}
+
+
+2. If you do not want to run via GUI in your IDE, open the terminal inside the IDE instead and run the command:
+   mvn spring-boot:run
+
