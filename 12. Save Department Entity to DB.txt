@@ -1,0 +1,58 @@
+1. We are going to be using 'POST' mapping over here.
+2. Imp: We are going to be using the DepartmentService and not DepartmentServiceImpl inside the controller class. This is because the
+   interface objects can go on to call the methods of the classes that implement it.
+3. 
+
+DepartmentController.java
+
+package com.dailycodebuffer.springBoot.tutorial.controller;
+
+import com.dailycodebuffer.springBoot.tutorial.entity.Department;
+import com.dailycodebuffer.springBoot.tutorial.service.DepartmentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DepartmentController {
+    @Autowired
+    private DepartmentService departmentService;
+    @PostMapping("/departments")
+    public Department saveDepartment(@RequestBody Department department){
+        return departmentService.saveDepartment(department);
+    }
+}
+
+
+4. DepartmentService.java
+
+package com.dailycodebuffer.springBoot.tutorial.service;
+
+import com.dailycodebuffer.springBoot.tutorial.entity.Department;
+
+public interface DepartmentService {
+    Department saveDepartment(Department department);
+}
+
+
+5. DepartmentServiceImpl.java
+
+package com.dailycodebuffer.springBoot.tutorial.service;
+
+import com.dailycodebuffer.springBoot.tutorial.entity.Department;
+import com.dailycodebuffer.springBoot.tutorial.repository.DepartmentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class DepartmentServiceImpl implements DepartmentService{
+    @Autowired
+    private DepartmentRepository departmentRepository;
+
+    @Override
+    public Department saveDepartment(Department department) {
+        return departmentRepository.save(department);
+    }
+}
+
