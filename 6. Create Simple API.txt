@@ -1,4 +1,7 @@
-1. Main class has @SpringBootApplication as its annotations.
+1. Main class has @SpringBootApplication as its annotations. It also contains the run method via which the application runs.
+   The run method is contained within the main(String[] args) method.
 2. Ctrl+Alt+O is used to delete all unused imports in IntelliJ Idea.
 3. If you want to change the configuration of your project, do it via application.properties like
    server.port=9090
+4. Configuration can also be changed via application.yml. Unlike application.properties - application.yml file does not exist.
+   We need to prepare it ourselves, as we will see further.

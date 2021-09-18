@@ -1,4 +1,4 @@
-1. create entity Department
+1. create Entity Department inside the entity package
 
 package com.dailycodebuffer.springBoot.tutorial.entity;
 
@@ -81,7 +81,7 @@ public class DepartmentController {
 
 
 
-3. DepartmentRepsoitory.java
+3. DepartmentRepository.java
 
 package com.dailycodebuffer.springBoot.tutorial.repository;
 

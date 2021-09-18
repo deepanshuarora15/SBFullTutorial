@@ -1,0 +1,28 @@
+1. Imp: When doing search by Id, use the method
+   repository.findById(id).get();
+
+2. Possible mistakes:
+   a. Instead of using findById(), you might end up using getById(), by giving the prototype in Repository interface which will
+      give errors.
+   b. Also findById(id) method gives Optional result. So use the findById(id).get() instead.
+   c. Do not forget to pass in id to the find() method.
+
+3. DepartmentServiceImpl
+
+@Override
+    public Department getDepartmentById(Long id) {
+        return departmentRepository.findById(id).get();
+    }
+
+
+4. DepartmentService.java
+
+    Department getDepartmentById(Long id);
+
+
+5. DepartmentController.java
+
+@GetMapping("/getDepartment/{Id}")
+    public Department getDepartmentById(@PathVariable Long Id){
+        return departmentService.getDepartmentById(Id);
+    }

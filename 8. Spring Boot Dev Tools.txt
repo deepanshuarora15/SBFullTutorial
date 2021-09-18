@@ -1,8 +1,9 @@
 1. Dev Tools helps in live-reload.
 2. As we make changes and save, the server gets stopped and re-initialzed automatically, thus saving us the trouble.
-3. But just adding the Dev Tools dependency is not enough, when it comes to IntellJ idea IDE. For this IDE, we need to do"
+3. Imp: But just adding the Dev Tools dependency is not enough, when it comes to IntellJ idea IDE. For this IDE, we need to do
    a. Ctrl + Shift + A and then go to menu 'Actions'
-   b. Search for 'Resgistry'
+   b. Search for 'Registry'
    c. Search for 'compiler.automake.allow.when.app.running' and check the chekbox.
    d. File->Settings->Compiler
       Here select 'Buld project automatically'
+4. Now whenever you make changes to your code and save it via Ctrl+S, the microservice would get re-started by default.

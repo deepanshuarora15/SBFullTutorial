@@ -16,3 +16,12 @@ public class HelloController {
 2. If you do not want to run via GUI in your IDE, open the terminal inside the IDE instead and run the command:
    mvn spring-boot:run
 
+3. Every controller must have the annotation @RestController at the top of the class. Similarly every method inside the controller,
+   must have one of the following 4 annotations. Note: it is not compulsory for the methods to have these annotations, but if they
+   do not have them. they would be dead functions - as there would exist no way to call them.
+4. The 4 annotations are:
+   a. DeleteMapping
+   b. GetMapping
+   c. PostMapping
+   d. PutMapping
+

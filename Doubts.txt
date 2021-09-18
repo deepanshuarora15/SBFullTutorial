@@ -1,0 +1,5 @@
+1. Lazy Loading or active loading of instances in Spring containers? Do all of the classes get instantiated on the run,
+   or do they get created only when they are required?
+
+2. In the PostMapping lecture in the end, when we save the object to the DB, why don't we get an error for primary key
+   integrity violation?

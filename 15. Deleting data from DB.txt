@@ -1,0 +1,21 @@
+1. For deleting data, we would be using 'DELETE' method from the Postman client.
+2. DepartmentController.java
+
+ @DeleteMapping(path = "/deleteDepartment/{departmentId}")
+    public String deleteDepartmentById(@PathVariable Long departmentId){
+        departmentService.deleteDepartmentById(departmentId);
+        return "Department " + departmentId.toString() + " deleted successfully";
+    }
+
+
+3. DepartmentService.java
+
+void deleteDepartmentById(Long departmentId);
+
+
+4. DepartmentServiceImpl.java
+
+@Override
+    public void deleteDepartmentById(Long departmentId) {
+        departmentRepository.deleteById(departmentId);
+    }

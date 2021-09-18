@@ -1,1 +1,1 @@
-1. use postman or Insomnia
+1. Use Postman or Insomnia or any other Rest API client that you find suitable.

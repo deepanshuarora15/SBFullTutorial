@@ -1,0 +1,37 @@
+1. PUT http method is used for update.
+2. Inside the method, we take in both the PathVariable and RequestBody.
+3. PathVariable tells us the id of the department that needs to be updated and RequestBody will contian the Department class object.
+4. Then in this example, we have just found out the department from the db, stored that in the object and updated its fields,
+   as per the fields from the RequestBody object.
+
+5. DepartmentServiceImpl.java
+
+@Override
+    public Department updateDepartment(Long departmentId, Department department) {
+        Department departmentfromDb = departmentRepository.findById(departmentId).get();
+        if(Objects.nonNull(department.getDepartmentName())
+            && department.getDepartmentName().length()!=0
+        ){
+            departmentfromDb.setDepartmentName(department.getDepartmentName());
+        }
+        if(Objects.nonNull(department.getDepartmentAddress())
+                && department.getDepartmentAddress().length()!=0
+        ){
+            departmentfromDb.setDepartmentAddress(department.getDepartmentAddress());
+        }
+        if(Objects.nonNull(department.getDepartmentCode())
+                && department.getDepartmentCode().length()!=0
+        ){
+            departmentfromDb.setDepartmentCode(department.getDepartmentCode());
+        }
+        return departmentRepository.save(departmentfromDb);
+    }
+
+6. DepartmentController.java
+
+@PutMapping("/updateDepartment/{departmentId}")
+    public Department updateDepartment(@PathVariable Long departmentId, @RequestBody Department department){
+        return departmentService.updateDepartment(departmentId, department);
+    }
+
+7. Doubt: in the  end, when we save the object to the DB, why don't we get an error for primary key integrity violation?

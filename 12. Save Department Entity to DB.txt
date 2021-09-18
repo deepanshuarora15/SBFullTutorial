@@ -1,4 +1,4 @@
-1. We are going to be using 'POST' mapping over here.
+1. We are going to be using 'POstMapping' over here.
 2. Imp: We are going to be using the DepartmentService and not DepartmentServiceImpl inside the controller class. This is because the
    interface objects can go on to call the methods of the classes that implement it.
 3. 
@@ -55,4 +55,6 @@ public class DepartmentServiceImpl implements DepartmentService{
         return departmentRepository.save(department);
     }
 }
+
+6. Imp: In PostMapping @RequestBody annotation is used, in order to get the request body.
 
