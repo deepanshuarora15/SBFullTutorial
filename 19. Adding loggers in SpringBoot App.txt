@@ -1,0 +1,1 @@
+* Left as we would rather use logging via Lombok slf4j

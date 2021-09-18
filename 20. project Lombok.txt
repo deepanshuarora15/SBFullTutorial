@@ -1,3 +1,35 @@
+1. There is a lot of boilere plat there for creating the Entity class. We can save that effor by using Project Lombok.
+2. Step 1: We need to add this dependency:
+
+<dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+</dependency>
+
+ <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+            </exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+3. Step 2: Add the Lombok plugin to your IntelliJ idea.
+4.
+
+Modify the entity as per the following code:
+
+
 package com.dailycodebuffer.springBoot.tutorial.entity;
 
 import lombok.AllArgsConstructor;

@@ -1,4 +1,37 @@
 1. When we receive the data from the client side in @RequestBody format, there always exists the possiblity of it having issues
    like null data or other such constraint violation.
 2. We need to handle such request via implementing Exception handling from our end.
-3. 
+3. Dependency to be added:
+
+ <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+    </dependency>
+
+
+4. There are multiple validations possible. Some of them are:
+a. @NotNull
+b. @NotBlank
+c. @Size()
+d. @Length()
+e. @Email
+f. @Positive
+g. @Negative
+h. @positiveorZero
+i. @Past
+j. @Future
+k. @FutureorPresent
+
+5. Whatever message we pass, comes in postman resposne with the field name default message like
+   "defaultMessage": "It is compulsory to send in DepartmentName field",
+
+6. In entity, we need to add this:
+	 @NotBlank(message = "It is compulsory to send in DepartmentName field")
+    private String departmentName;
+
+7. In controller, we need to add this annotation:
+
+@PostMapping("/departments")
+    public Department saveDepartment(@Valid @RequestBody Department department){
+        return departmentService.saveDepartment(department);
+    }

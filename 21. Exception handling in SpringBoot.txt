@@ -1,0 +1,6 @@
+1. Whenever an exception occurs, we need to send an appropriate msg to the front end team so they handle the UI accordingly.
+2. We need to be careful of the HTTP codes that we are sending. Eg: if the client asks for data for department 5 and the department itself
+   does not exist, then the default response is HTTP 500 : Internal Server Error.
+3. But this should not be the response that we should be sending ideally. the reason being: there is no internal server error.
+   The server is working fine. We need to handle the exception and tell the user that ok, data not found for this department id.
+4. 
