@@ -1,0 +1,8 @@
+1. We will be usign Junit5 and Mockito to test :
+   a. Service Layer
+   b. Repsoitory Layer
+   c. Controller Layer
+
+2. Imp: When we begin testing our Controler layer, we need to test only the controller layer. But controller layer uses service layer.
+   So instead of diving deep and going to test the service kayer, we would rather just 'mock' it. This is due to separation of concern
+   concept. We need to focus only on the class at test which is controller in this case. We do not care about service layer as of now

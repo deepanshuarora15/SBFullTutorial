@@ -1,11 +1,11 @@
 package com.dailycodebuffer.springBoot.tutorial.controller;
 
 import com.dailycodebuffer.springBoot.tutorial.entity.Department;
+import com.dailycodebuffer.springBoot.tutorial.exception.DepartmentNotFoundException;
 import com.dailycodebuffer.springBoot.tutorial.service.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -23,7 +23,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/getDepartment/{Id}")
-    public Department getDepartmentById(@PathVariable Long Id){
+    public Department getDepartmentById(@PathVariable Long Id) throws DepartmentNotFoundException {
         return departmentService.getDepartmentById(Id);
     }
 
